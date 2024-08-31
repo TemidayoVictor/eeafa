@@ -13,7 +13,7 @@
                     <div>
                         <h1 class="head"> {{$data->title}} </h1>
                         <p>
-                            {{ $data->body }}
+                            {!! (str_replace( '<p>&nbsp;</p>', '', $data->body)) !!}
                         </p>
                     </div>
                     <div>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="home-article-body">
                             <h2> {{$article->title}} </h2>
-                            <p>{{ \Illuminate\Support\Str::limit($article->body, 90, '...') }}</p>
+                            <p>{{ \Illuminate\Support\Str::limit(strip_tags($article->body), 90, '...') }}</p>
                             <a href="{{ route('blogView', ['id' => $article->id]) }}" class="btn btn-blue block">Read</a>
                         </div>
                     </div>

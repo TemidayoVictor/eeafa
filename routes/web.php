@@ -18,6 +18,7 @@ Route::get('/', [NavigationController::class, 'index'])->name('home');
 
 Route::get('/about', [NavigationController::class, 'about'])->name('about');
 
+Route::post('/criteria', [NavigationController::class, 'criteria'])->name('criteria');
 Route::get('/apply', [NavigationController::class, 'apply'])->name('apply');
 Route::post('/apply', [NavigationController::class, 'applyPost']);
 

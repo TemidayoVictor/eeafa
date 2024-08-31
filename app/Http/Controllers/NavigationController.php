@@ -46,10 +46,10 @@ class NavigationController extends Controller
             'phone' => 'required',
             'address' => 'required',
             'gender' => 'required',
-            'school' => 'required',
-            'course' => 'required',
-            'year' => 'required',
-            'degree' => 'required',
+            // 'school' => 'required',
+            // 'course' => 'required',
+            // 'year' => 'required',
+            // 'degree' => 'required',
             'cover_letter' => 'required',
             'ssce' => 'required|image|mimes:jpg,png,jpeg,webp|max:4000',
             'certificate' => 'required|image|mimes:jpg,png,jpeg,webp|max:4000',
@@ -85,10 +85,10 @@ class NavigationController extends Controller
             'phone' => $request->phone,
             'address' => $request->address,
             'gender' => $request->gender,
-            'school' => $request->school,
-            'course' => $request->course,
-            'year' => $request->year,
-            'degree' => $request->degree,
+            'school' => 'school',
+            'course' => 'course',
+            'year' => 'year',
+            'degree' => 'degree',
             'ssce' => $sscePath,
             'certificate' => $certPath,
             'cover_letter' => $request->cover_letter,
@@ -176,6 +176,24 @@ class NavigationController extends Controller
             return back()->with('mailStatus', 'Thank you for Subscribing');
         }
 
+    }
+
+    public function criteria(Request $request) {
+        $this->validate($request, [
+            'jamb' => 'required',
+            'indigene' => 'required',
+        ]);
+
+        $jamb = $request->jamb;
+        $indigene = $request->indigene;
+
+        if($jamb == 'yes' && $indigene == 'yes') {
+            return redirect()->route('apply');
+        }
+
+        else {
+            return back()->with('applyStatus', 'true');
+        }
     }
 
 }

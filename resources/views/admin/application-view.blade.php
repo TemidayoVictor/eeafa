@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="flex-3 adm-app-det flex-col-mob">
-                    <h4 class="left">Certificate</h4>
+                    <h4 class="left">Jamb Result</h4>
                     <div class="image">
                         <a href="{{ $application->certificate }}">
                             <img src="{{ $application->certificate }}" alt="">

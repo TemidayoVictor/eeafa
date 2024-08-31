@@ -24,12 +24,12 @@
             <div class="nav-link"><a href="#" id="contact-btn">Contact Us</a></div>
         </nav>
         <div class="other-links flex-0">
-            <div><a href="{{ route('apply') }}" class="btn btn-blue">Apply</a></div>
+            <div><a href="#" class="btn btn-blue" id="apply-btn">Apply</a></div>
             <div><a href="#" class="btn btn-yellow" id="donate-btn">Donate</a></div>
             @auth
                 <div><a href="{{ route('adminApplications') }}" class="desktop btn btn-blue btn-dec">Admin</a></div>
                 @if($admin == false) 
-                    <div><a href="{{ route('adminApplications') }}" class="mobile btn btn-blue btn-dec">Admin</a></div>
+                    <div class="mobile"><a href="{{ route('adminApplications') }}" class="btn btn-blue btn-dec">Admin</a></div>
                 @endif
             @endauth
         </div>
@@ -54,6 +54,14 @@
                     <p> {{session('mailStatus')}} </p>
                 </div>
             </div>                                                                    
+        @endif
+
+        @if (session('applyStatus'))
+            <div class="container">
+                <div class="status stat-2 error">
+                    <p> We are sorry to inform you that you do not currently meet the criteria required to be a part of our program. But stay tuned for latest information from us.</p>
+                </div>
+            </div>
         @endif
         
         @if ($admin == false)
@@ -124,6 +132,16 @@
                             </div>
                         </div>
                     </div>
+                    <p>You can support us in any of the pathways categorized as follows:</p>
+                    <div>
+                        <ul>
+                            <li><p><strong>Bronze:</strong>  $1,000-$4,999 </p></li>
+                            <li><p><strong>Silver:</strong> $5,000-$9,999 </p></li>
+                            <li><p><strong>Gold:</strong> $10,000 -$14,999</p></li>
+                            <li><p><strong>Platinum:</strong> $15,000-$19,999</p></li>
+                            <li><p><strong>Diamond:</strong> >20,000</p></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,6 +194,69 @@
         </div>
     </div>
 
+    <div class="donate" id="apply">
+        <div class="don-cover">
+            <div class="donate-con">
+                <div class="donate-head">
+                    <h2>Apply To Our Program</h2>
+                </div>
+                <div class="don-p">
+                    <h3>Eligibility Criteria</h3>
+                </div>
+                <div class="donate-body">
+                    <div id="instructions">
+                        <ul>
+                            <li><p>Demonstrate intellectual capability by successfully passing the entrance exam.</p></li>
+                            <li><p>Passed the JAMB examination and applied for admission to a federal university to study nursing.</p></li>
+                            <li><p>Be a recognized indigene of Nsukka local government</p></li>
+                            <li><p>Currently reside within the Nsukka local government area</p></li>
+                            <li><p>Come from a family that is unable to afford a college education.</p></li>
+                            <li><p>Be a first-generation university student</p></li>
+                        </ul>
+                        <p class="mt-1">If you meet the above criteria, please click the link below</p>
+                        <a href="#" class="btn btn-blue block" id="continueBtn" >Continue</a>
+                    </div>
+
+                    <div id="criteria" class="d-none">
+                        <form action="{{route('criteria')}}" method="post">
+                            @csrf
+                            <div>
+                                <label for="" class="mt-1"><p>Have you completed JAMB?</p></label>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <label for=""><p>YES</p></label>
+                                        <input type="radio" name="jamb" value="yes" class="ml-1" required>
+                                    </div>
+                                    <div class="flex">
+                                        <label for=""><p>NO</p></label>
+                                        <input type="radio" name="jamb" value="no" class="ml-1" required>
+                                    </div>
+                                </div>
+
+                                <label for="" class="mt-1"><p>Are you an indigene of NSUKKA</p></label>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <label for=""><p>YES</p></label>
+                                        <input type="radio" name="indigene" value="yes" class="ml-1" required>
+                                    </div>
+                                    <div class="flex">
+                                        <label for=""><p>NO</p></label>
+                                        <input type="radio" name="indigene" value="no" class="ml-1" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-blue block w-100 mt-1">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="don-close" id="apply-close">
+            <p>Close</p>
+        </div>
+    </div>
+
     <div class="section bcc-blue container mailing">
         <div class="container-2">
             <div class="flex-4 flex-col">
@@ -209,11 +290,11 @@
             <div class="bod-bot-mob">
                 <h3>Quick Links</h3>
                 <div class="footer-links">
-                    <a href="#" class="f-link">Home</a>
-                    <a href="#" class="f-link">About Us</a>
-                    <a href="#" class="f-link">Gallery / Events</a>
-                    <a href="#" class="f-link">Articles & Blog</a>
-                    <a href="#" class="f-link"></a>
+                    <a href="{{ route('home') }}" class="f-link">Home</a>
+                    <a href="{{ route('about') }}" class="f-link">About Us</a>
+                    <a href="{{ route('gallery') }}" class="f-link">Gallery / Events</a>
+                    <a href="{{ route('blog') }}" class="f-link">Articles & Blog</a>
+                    {{-- <a href="#" class="f-link"></a> --}}
                 </div>
             </div>
             <div class="flex-5 bod-bot-mob">
@@ -242,6 +323,14 @@
 
     @yield('swiperscript')
     {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/t87rwwndacrt9grg1jwlnfaxaabxw3cxj77od5l8m4dhkcox/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea',
+        plugins: 'anchor autolink charmap codesample emoticons',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
     <script src="{{ asset('js/script.js') }}"></script>
     
 </body>

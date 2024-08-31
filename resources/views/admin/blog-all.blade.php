@@ -23,7 +23,7 @@
                 <div class="adm-blog-right flex-5">
                     <h2>{{ $blog->title }}</h2>
                     <p>
-                        {{ \Illuminate\Support\Str::limit($blog->body, 150, '...') }}
+                        {{ \Illuminate\Support\Str::limit(strip_tags($blog->body), 150, '...') }}
                     </p>
                     <div class="flex">
                         <div>

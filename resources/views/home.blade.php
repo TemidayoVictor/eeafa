@@ -15,7 +15,7 @@
         <div class="hero-section mySwiper">
             <div class="swiper-wrapper">
                 
-                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/nurse1.jpg') }}')">
+                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/home3.png') }}')">
                     <div class="overlay"></div>
                     <div class="content">
                         <h1>Empower Through Education</h1>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
     
-                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/homeimg.webp') }}')">
+                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/home6.png') }}')">
                     <div class="overlay"></div>
                     <div class="content">
                         <h1>Your Future Starts Here</h1>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
     
-                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/homeimg2.webp') }}')">
+                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/nurse1c.png') }}')">
                     <div class="overlay"></div>
                     <div class="content">
                         <h1>Join Our Mission</h1>
@@ -109,7 +109,7 @@
                     <div class="home-article-body">
                         <h2> {{ \Illuminate\Support\Str::limit($article->title, 20, '...') }} </h2>
                         <p>
-                            {{ \Illuminate\Support\Str::limit($article->body, 120, '...') }}
+                            {{ \Illuminate\Support\Str::limit(strip_tags($article->body), 120, '...') }}
                         </p>
                         <a href="{{ route('blogView', ['id' => $article->id]) }}" class="btn btn-blue block">Read</a>
                     </div>

@@ -29,7 +29,7 @@
                             <div class="gallery-box-right">
                                 <h3> {{$data->title}} </h3>
                                 <p>
-                                    {{ \Illuminate\Support\Str::limit($data->body, 150, '...') }}
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($data->body), 150, '...') }}
                                 </p>
                                 <div class="flex-0 gal-btn">
                                     <a href="{{ route('galleryView', ['id' => $data->id]) }}" class="btn-und">view event</a>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="home-article-body">
                             <h2> {{$article->title}} </h2>
-                            <p>{{ \Illuminate\Support\Str::limit($article->body, 90, '...') }}</p>
+                            <p>{{ \Illuminate\Support\Str::limit(strip_tags($article->body), 90, '...') }}</p>
                             <a href="{{ route('blogView', ['id' => $article->id]) }}" class="btn btn-blue block">Read</a>
                         </div>
                     </div>

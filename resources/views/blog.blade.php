@@ -18,7 +18,7 @@
                         <div class="blog-body right"> 
                             <h3> {{ \Illuminate\Support\Str::limit($article->title, 31, '...') }} </h3>
                             <p>
-                                {{ \Illuminate\Support\Str::limit($article->body, 90, '...') }}
+                                {{ \Illuminate\Support\Str::limit(strip_tags($article->body), 90, '...') }}
                             </p>
                             <a href="{{ route('blogView', ['id' => $article->id]) }}" class="btn-und">Read Article</a>
                         </div>

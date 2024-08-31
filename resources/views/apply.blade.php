@@ -62,11 +62,29 @@
                                         <option value="Female">Female</option>
                                     </select>
                                 </div>
+
+                                <div class="apply-input">
+                                    <label for="">Cover Letter</label>
+                                    <textarea id="" cols="30" rows="10" name="cover_letter" required>{{ old('cover_letter') }}</textarea>
+                                </div>
+                                <div class="apply-input">
+                                    <label for="">Upload S.S.C.E Certificate</label>
+                                    <input type="file" class="bod-none" name="ssce" required accept="image/*">
+                                </div>
+                                <div class="apply-input">
+                                    <label for="">Upload Jamb Result</label>
+                                    <input type="file" class="bod-none" name="certificate" required accept="image/*">
+                                </div>
+                                <div>
+                                    <div class="bod-top"></div>
+                                    <button class="btn btn-blue btn-block">Submit Application</button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-1">
+                    {{-- <div class="mt-1">
                         <div class="donate-head">
                             <h2>Academic Information</h2>
                         </div>
@@ -115,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </form>
 
                 <div class="apply-info">
