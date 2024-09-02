@@ -110,7 +110,7 @@ class NavigationController extends Controller
 
     public function blogView($id) {
         $data = Blog::where('status', 'Active')->where('id', $id)->orderBy('id', 'desc')->first();
-        $article = Blog::where('status', 'Active')->inRandomOrder()->first();
+        $article = Blog::where('status', 'Active')->where('id', '!=', $id)->inRandomOrder()->first();
         if($data) {
             return view('blog-view', [
                 'active' => 'blog',

@@ -78,12 +78,22 @@
                     <p>
                         Growing up in a large family with a low-income parent, I understand the struggle of making ends meet. Gaining university admission was a significant challenge for my parents, who had little or no money to support my education, and for one of my older brothers, who also gained admission the same year as me. I could recall traveling from one relative to another, asking for support. 
                     </p>
+
+                    <div class="mobile left">
+                        <img src="{{ asset('images/President2.jpeg') }}" alt="">
+                    </div>
+                    
                     <p>
                         Fortunately, with the support of my maternal uncle and other older brothers, who had begun hustling to help my parent, I could attain a university education. After graduating from the university, my dream of furthering my education abroad seemed out of reach due to financial constraints. But, through God's divine intervention with the U.S.A visa lottery, I found myself in the United States.
                     </p>
                     <p>
                         My journey in the U.S. was a mix of challenges and victories, but with determination, I persevered. I pursued multiple degrees and certifications (B.S. in Biology, BS in Nursing, MSc in Adult Nursing, Adult-Gerontology Primary Care Nurse Practitioner, and DNP in Adult-Gerontology Primary Care).
                     </p>
+
+                    <div class="mobile left">
+                        <img src="{{ asset('images/President3.jpeg') }}" alt="">
+                    </div>
+                    
                     <p>
                         As I reflect on the grace of God and the support of my family for my accomplishments, I think of other families who are currently in the same position as my family was. I am now dedicated to supporting those less fortunate through Equal Education Access for All (EEAFA) in Nsukka local government and hope to expand with time.
                     </p>
@@ -104,12 +114,14 @@
                             Together, we can make a real difference in this individual's life. Your support transforms dreams into reality. Let's create a brighter future, one student at a time.
                         </p>
                         <div class="quotes">
-                            <p><strong>Chioma Onah - Executive Director, EEAFA</strong></p>
+                            <p><strong>Chioma Onah - President, EEAFA</strong></p>
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="{{ asset('images/nurse9.jpg') }}" alt="">
+                    <img src="{{ asset('images/President.jpeg') }}" alt="" class="mb-01">
+                    <img src="{{ asset('images/President2.jpeg') }}" alt="" class="mb-01 desktop">
+                    <img src="{{ asset('images/President3.jpeg') }}" alt="" class="desktop">
                 </div>
             </div>
         </div>

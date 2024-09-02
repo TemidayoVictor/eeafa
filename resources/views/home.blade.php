@@ -35,7 +35,7 @@
                     </div>
                 </div>
     
-                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/nurse1c.png') }}')">
+                <div class="hero-slide swiper-slide container" style="background-image: url('{{ asset('images/home5b.png') }}')">
                     <div class="overlay"></div>
                     <div class="content">
                         <h1>Join Our Mission</h1>
@@ -59,7 +59,7 @@
         <div class="flex mt-2 flex-col-mob">
             
             <div class="left">
-                <img src="{{ asset('images/homeimg3.jpg') }}" alt="">
+                <img src="{{ asset('images/eeafalogo.jpg') }}" alt="">
             </div>
 
             <div class="right">

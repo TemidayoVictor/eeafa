@@ -15,7 +15,10 @@
 <body>
 
     <header class="header flex container">
-        <a href=" {{ route('home') }} " class="logo">EEAFA</a>
+        <a href=" {{ route('home') }} " class="logo flex-0">
+            <img src="{{ asset('images/eeafalogo.jpg') }}" alt="">
+            <p>EEAFA</p>
+        </a>
         <nav class="nav-con flex-2" id="nav-con">
             <div class="nav-link {{$active == 'home' ? 'active' : ''}}"><a href="{{ route('home') }}">Home</a></div>
             <div class="nav-link {{$active == 'about' ? 'active' : ''}}"><a href="{{ route('about') }}">About Us</a></div>
@@ -284,7 +287,7 @@
         <div class="footer">
             <div class="flex-5 bod-bot-mob">
                 <h3>EEAFA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nihil id iure doloremque reiciendis? Beatae.</p>
+                <p>EEAFA aims to mentor participants in securing scholarships and study opportunities abroad after their first degree in Nigeria</p>
                 <a href="#" class="btn btn-blue">Partner with us</a>
             </div>
             <div class="bod-bot-mob">
@@ -299,7 +302,7 @@
             </div>
             <div class="flex-5 bod-bot-mob">
                 <h3>Apply Now</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nihil id iure doloremque reiciendis? Beatae.</p>
+                <p>Seize the opportunity to transform your future. Apply now for a scholarship and take the first step towards achieving your dreams</p>
                 <a href="#" class="btn btn-yellow">Apply Now</a>
             </div>
             <div class="flex-5">
