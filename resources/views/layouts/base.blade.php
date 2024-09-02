@@ -5,6 +5,7 @@
     <meta name="csrf-token" content="content">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('images/Asset 9.png') }}" type="image/png" sizes="160x160">
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> --}}
     @yield('swiper')
     <link rel="stylesheet" href="{{ asset ('css/styles.css')}}">
@@ -16,7 +17,7 @@
 
     <header class="header flex container">
         <a href=" {{ route('home') }} " class="logo flex-0">
-            <img src="{{ asset('images/eeafalogo.jpg') }}" alt="">
+            <img src="{{ asset('images/Asset 9.png') }}" alt="">
             <p>EEAFA</p>
         </a>
         <nav class="nav-con flex-2" id="nav-con">
@@ -286,7 +287,10 @@
     <div class="section bcc-black container">
         <div class="footer">
             <div class="flex-5 bod-bot-mob">
-                <h3>EEAFA</h3>
+                <div class="flex-0">
+                    {{-- <img src="{{ asset('images/Asset 10.png') }}" alt="" class="logo"> --}}
+                    <h3>EEAFA</h3>
+                </div>
                 <p>EEAFA aims to mentor participants in securing scholarships and study opportunities abroad after their first degree in Nigeria</p>
                 <a href="#" class="btn btn-blue">Partner with us</a>
             </div>
