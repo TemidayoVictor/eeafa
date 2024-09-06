@@ -71,6 +71,11 @@ input, textarea {
     font-family: inherit;
 }
 
+li p {
+    margin-bottom: 0;
+    line-height: 1.9rem;
+}
+
 /*  */
 
 .container {
@@ -127,6 +132,13 @@ input, textarea {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.flex-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 .flex-col {
@@ -318,6 +330,13 @@ input, textarea {
     margin-bottom: .5em;
 }
 
+.head-2 {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: .2em;
+}
+
 .text-und {
     text-decoration: underline;
 }
@@ -427,6 +446,10 @@ input, textarea {
     display: none;
 }
 
+.img-border {
+    box-shadow: var(--box-shadow);
+}
+
 /*  */
 
 .header {
@@ -491,7 +514,7 @@ input, textarea {
 }
 
 .main {
-    padding-top: 4em;
+    padding-top: 4.5em;
 }
 
 .main .apply {
@@ -553,7 +576,7 @@ input, textarea {
     width: 63%;
 }
 
-.home-about .left img {
+.home-about .left img, .image-width img {
     width: 100%;
     border-radius: 5px;
 }
@@ -693,6 +716,10 @@ input, textarea {
     background-color: var(--blue);
 }
 
+p.text-center {
+    text-align: center;
+}
+
 /* Home page ends */
 
 /* about page starts */
@@ -760,6 +787,19 @@ input, textarea {
 .value h3 {
     margin-top: .7em;
     text-align: center;
+}
+
+.image-width {
+    width: 20%;
+}
+
+.content-width {
+    width: 77%;
+}
+
+.team {
+    border-bottom: 1px solid var(--white);
+    padding-block: 1em;
 }
 
 /* about page ends */
@@ -1182,8 +1222,9 @@ button.sidebar-link {
     margin-left: .2rem;
 }
 
-.footer .flex-0 h3 {
-    width: 80%;
+.footer h3 {
+    color: var(--blue);
+    text-decoration: underline;
 }
 
 .footer-links a {
@@ -1258,6 +1299,10 @@ button.sidebar-link {
         gap: 1em;
     }
 
+    .head, .head-2 {
+        font-size: 1.7rem;
+    }
+
     .logo p {
         font-size: 1.5rem;
     }
@@ -1319,7 +1364,7 @@ button.sidebar-link {
         font-size: 1.7rem;
     }
 
-    .home-about .left, .home-about .right, .dyk .left, .dyk .right, .about .right, .about .left, .leader .right, .leader .left, .apply-con, .apply-form, .apply-info, .gallery-left, .gallery-right, .blog-view-img, .blog-view-con, .admin-content, .adm-blog-right, .apply-con.login {
+    .home-about .left, .home-about .right, .dyk .left, .dyk .right, .about .right, .about .left, .leader .right, .leader .left, .apply-con, .apply-form, .apply-info, .gallery-left, .gallery-right, .blog-view-img, .blog-view-con, .admin-content, .adm-blog-right, .apply-con.login, .content-width, .image-width {
         width: 100%;
     } 
 
@@ -1362,7 +1407,7 @@ button.sidebar-link {
     }
 
     .sidebar.active {
-        top: 10%;
+        top: 15%;
     }
 
     .adm-app-right h1, .adm-app-left h1 {

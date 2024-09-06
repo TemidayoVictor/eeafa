@@ -23,10 +23,6 @@ contactBtn.onclick = () => {
   contact.classList.add('active-flex');
 }
 
-applyBtn.onclick = () => {
-  apply.classList.add('active-flex');
-}
-
 donateClose.onclick = () => {
   donate.classList.remove('active-flex');
 }
@@ -43,13 +39,20 @@ menuBtn.onclick = () => {
   navCon.classList.toggle('active');
 }
 
-admMenuBtn.onclick = () => {
-  sidebar.classList.toggle('active');
-}
-
 continueBtn.onclick = () => {
   criteria.classList.remove('d-none');
   instructions.classList.add('d-none');
 }
 
+admMenuBtn.onclick = () => {
+  sidebar.classList.toggle('active');
+}
+
+admMenuBtn.onclick = () => {
+  sidebar.classList.toggle('active');
+}
+
+applyBtn.onclick = () => {
+  apply.classList.add('active-flex');
+}
 

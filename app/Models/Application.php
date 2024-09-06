@@ -26,5 +26,8 @@ class Application extends Model
         'cover_letter',
         'email',
         'status',
+        'ref1',
+        'ref2',
+        'exam',
     ];
 }

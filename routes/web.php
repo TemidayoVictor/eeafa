@@ -22,6 +22,8 @@ Route::post('/criteria', [NavigationController::class, 'criteria'])->name('crite
 Route::get('/apply', [NavigationController::class, 'apply'])->name('apply');
 Route::post('/apply', [NavigationController::class, 'applyPost']);
 
+Route::get('/scholarship', [NavigationController::class, 'scholarship'])->name('scholarship');
+
 Route::get('/blog', [NavigationController::class, 'blog'])->name('blog');
 Route::get('/blog-view/{id}', [NavigationController::class, 'blogView'])->name('blogView');
 
@@ -41,6 +43,7 @@ Route::middleware(['auth'])->group(function() {
 
     // Admin Routes
     Route::get('/admin/applications', [ApplicationsController::class, 'index'])->name('adminApplications');
+    Route::get('/admin/download-reference/{id}/{ref}', [ApplicationsController::class, 'download'])->name('downloadReference');
     Route::get('/admin/applications-view/{id}', [ApplicationsController::class, 'applicationView'])->name('adminApplicationView');
     Route::post('/admin/applications-options/{id}', [ApplicationsController::class, 'applicationOptions'])->name('adminApplicationOptions');
     

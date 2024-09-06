@@ -53,8 +53,12 @@ class NavigationController extends Controller
             'cover_letter' => 'required',
             'ssce' => 'required|image|mimes:jpg,png,jpeg,webp|max:4000',
             'certificate' => 'required|image|mimes:jpg,png,jpeg,webp|max:4000',
+            'ref1' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'ref2' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'exam' => 'required|image|mimes:jpg,png,jpeg,webp|max:4000',
         ]);
 
+        // ssce 
         if(!empty($request->ssce)) {
             $ssceFile = time(). '.' . $request->ssce->extension();
 
@@ -66,8 +70,9 @@ class NavigationController extends Controller
             $sscePath = "";
         }
 
+        // jamb
         if(!empty($request->certificate)) {
-            $certFile = time(). '.' . $request->certificate->extension();
+            $certFile = time(). '001.' . $request->certificate->extension();
 
             $request->certificate->move(public_path('certifications'), $certFile);
             $certPath = url('certifications/' . $certFile);
@@ -75,6 +80,41 @@ class NavigationController extends Controller
 
         else {
             $certPath = "";
+        }
+
+        // exam result
+        if(!empty($request->exam)) {
+            $examFile = time(). '002.' . $request->exam->extension();
+
+            $request->exam->move(public_path('certifications'), $examFile);
+            $examPath = url('certifications/' . $examFile);
+        }
+
+        else {
+            $examPath = "";
+        }
+
+        // ref1
+        if(!empty($request->ref1)) {
+            // dd("refrenece1");
+            $ref1File = $request->first_name.'_'.$request->last_name.'_reference1_.'.$request->ref1->extension();
+            $request->ref1->move(public_path('references'), $ref1File);
+            $ref1Path = 'references/'.$ref1File;
+        }
+
+        else {
+            $ref1Path = "";
+        }
+
+        // ref2
+        if(!empty($request->ref2)) {
+            $ref2File = $request->first_name.'_'.$request->last_name.'_reference2_.'.$request->ref2->extension();
+            $request->ref2->move(public_path('references'), $ref2File);
+            $ref2Path = 'references/'.$ref2File;
+        }
+
+        else {
+            $ref2Path = "";
         }
 
         // create application
@@ -94,6 +134,9 @@ class NavigationController extends Controller
             'cover_letter' => $request->cover_letter,
             'email' => $request->email,
             'status' => 'Unapproved',
+            'exam' => $examPath,
+            'ref1' => $ref1Path,
+            'ref2' => $ref2Path,
         ]);
 
         return back()->with('status', 'Application Submitted Successfully');
@@ -196,4 +239,11 @@ class NavigationController extends Controller
         }
     }
 
+    public function scholarship() {
+        return view('scholarship', [
+            'active' => 'scholarship',
+            'admin' => false,
+            'applicationActive' => true, 
+        ]);
+    }
 }

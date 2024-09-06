@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Application;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\Storage;
 
 class ApplicationsController extends Controller
 {
@@ -59,6 +60,21 @@ class ApplicationsController extends Controller
         $message = "Application ".$request->purpose."d Successfully";
 
         return redirect()->route('adminApplications')->with('status', $message);
+    }
+
+    public function download($id, $ref) {
+        $application = Application::findOrFail($id);
+        $fullname = 'Reference_'.$ref.'_'.$application->first_name.'_'.$application->last_name.'.pdf';
+        if($ref == 1) {
+            $filePath = public_path($application->ref1);
+            return \Response::download($filePath);
+        }
+
+        elseif($ref == 2) {
+            $filePath = public_path($application->ref2);
+            return \Response::download($filePath);
+        }
+
     }
     
 }

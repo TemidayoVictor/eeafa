@@ -75,6 +75,21 @@
                                     <label for="">Upload Jamb Result</label>
                                     <input type="file" class="bod-none" name="certificate" required accept="image/*">
                                 </div>
+                                <div class="apply-input">
+                                    <label for="">Upload First Reference Letter</label>
+                                    <input type="file" class="bod-none" name="ref1" required>
+                                </div>
+
+                                <div class="apply-input">
+                                    <label for="">Upload Second Reference Letter</label>
+                                    <input type="file" class="bod-none" name="ref2" required>
+                                </div>
+
+                                <div class="apply-input">
+                                    <label for="">Upload Entrance Exam Result</label>
+                                    <input type="file" class="bod-none" name="exam" required accept="image/*">
+                                </div>
+
                                 <div>
                                     <div class="bod-top"></div>
                                     <button class="btn btn-blue btn-block">Submit Application</button>

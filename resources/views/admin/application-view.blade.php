@@ -37,7 +37,7 @@
                     <p class="right">{{$application->address}}</p>
                 </div>
 
-                <div class="flex-3 adm-app-det">
+                {{-- <div class="flex-3 adm-app-det">
                     <h4 class="left">Higher Institution:</h4>
                     <p class="right">{{$application->school}}</p>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="flex-3 adm-app-det">
                     <h4 class="left">Class of Degree</h4>
                     <p class="right">{{$application->degree}}</p>
-                </div>
+                </div> --}}
 
                 <div class="flex-3 adm-app-det flex-col-mob">
                     <h4 class="left">S.S.C.E</h4>
@@ -73,6 +73,25 @@
                             <img src="{{ $application->certificate }}" alt="">
                         </a>
                     </div>
+                </div>
+
+                <div class="flex-3 adm-app-det flex-col-mob">
+                    <h4 class="left">Exam Result</h4>
+                    <div class="image">
+                        <a href="{{ $application->exam }}">
+                            <img src="{{ $application->exam }}" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex adm-app-det">
+                    <h4>Reference Letter 1:</h4>
+                    <a href="{{ route('downloadReference', ['id' => $application->id, 'ref' => 1]) }}" class="btn btn-blue">Download</a>
+                </div>
+
+                <div class="flex adm-app-det">
+                    <h4>Reference Letter 2:</h4>
+                    <a href="{{ route('downloadReference', ['id' => $application->id, 'ref' => 2]) }}" class="btn btn-blue">Download</a>
                 </div>
 
                 <div class="btn-grid">

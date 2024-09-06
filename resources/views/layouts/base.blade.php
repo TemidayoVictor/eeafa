@@ -23,12 +23,14 @@
         <nav class="nav-con flex-2" id="nav-con">
             <div class="nav-link {{$active == 'home' ? 'active' : ''}}"><a href="{{ route('home') }}">Home</a></div>
             <div class="nav-link {{$active == 'about' ? 'active' : ''}}"><a href="{{ route('about') }}">About Us</a></div>
+            <div class="nav-link {{$active == 'scholarship' ? 'active' : ''}}"><a href="{{route('scholarship')}}">Scholarship</a></div>
             <div class="nav-link {{$active == 'gallery' ? 'active' : ''}}"><a href="{{ route('gallery') }}">Gallery / Events</a></div>
             <div class="nav-link {{$active == 'blog' ? 'active' : ''}}"><a href="{{ route('blog') }}">Blog</a></div>
             <div class="nav-link"><a href="#" id="contact-btn">Contact Us</a></div>
         </nav>
         <div class="other-links flex-0">
-            <div><a href="#" class="btn btn-blue" id="apply-btn">Apply</a></div>
+            {{-- <div><a href="#" class="btn btn-blue" id="apply-btn">Apply</a></div> --}}
+            {{-- <div><a href=" {{route('scholarship')}} " class="btn btn-blue">Apply</a></div> --}}
             <div><a href="#" class="btn btn-yellow" id="donate-btn">Donate</a></div>
             @auth
                 <div><a href="{{ route('adminApplications') }}" class="desktop btn btn-blue btn-dec">Admin</a></div>
@@ -111,7 +113,7 @@
                 </div>
                 <div class="donate-body">
                     <div>
-                        <div class="don-item">
+                        {{-- <div class="don-item">
                             <div class="don-title">
                                 <h3>Bank</h3>
                             </div>
@@ -134,7 +136,7 @@
                             <div class="don-detail">
                                 <p>Equal Education Access For All</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <p>You can support us in any of the pathways categorized as follows:</p>
                     <div>
@@ -261,6 +263,29 @@
         </div>
     </div>
 
+    <div class="donate" id="inactive">
+        <div class="don-cover">
+            <div class="donate-con">
+                <div class="donate-head">
+                    <h2>Apply To Our Program</h2>
+                </div>
+                <div class="don-p">
+                    <h3>Please Check Back Later</h3>
+                </div>
+                <div class="donate-body">
+                    <div class="don-detail">
+                        <p class="text-center">
+                            Our Application runs from the 25th of April to the 31st of May. Please check back again within that time frame. Thank you and best of luck.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="don-close" id="inactive-close">
+            <p>Close</p>
+        </div>
+    </div>
+
     <div class="section bcc-blue container mailing">
         <div class="container-2">
             <div class="flex-4 flex-col">
@@ -331,14 +356,14 @@
     @yield('swiperscript')
     {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
     <script src="https://cdn.tiny.cloud/1/t87rwwndacrt9grg1jwlnfaxaabxw3cxj77od5l8m4dhkcox/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
+    {{-- <script>
         tinymce.init({
         selector: 'textarea',
         plugins: 'anchor autolink charmap codesample emoticons',
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
-    </script>
-    <script src="{{ asset('js/script.js') }}"></script>
+    </script> --}}
+    <script src="{{ asset('js/script2.js') }}"></script>
     
 </body>
 </html>
