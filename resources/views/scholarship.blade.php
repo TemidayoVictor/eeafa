@@ -147,7 +147,7 @@
                         <ul>
                             <li>
                                 <p>
-                                    Program entrance exams are scheduled for January 9, 10, or 11, 2025. To be considered for the 2025 Cohort scholarship, you must successfully complete the entrance exam on one of the specified dates. More info will be provided on our website.
+                                    Program entrance exams are scheduled for January 9, 10, or 11, 2025. To be considered for the 2025 Cohort scholarship, you must successfully complete the entrance exam on one of the specified dates. More info will be provided on our website. To apply for the entrance exam, kindly send an email to us @obioma.onah@equaleducationaccessforall.org
                                 </p>
                             </li>
     
@@ -163,6 +163,41 @@
                                 </p>
                             </li>   
                         </ul>
+                    </div>
+
+                    <div>
+                        <h1 class="head-2">Required Documents for Application</h1>
+                        
+                        <p>
+                            While waiting for the application to be open, please get the following documents:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <p>
+                                    Jamb Result
+                                </p>
+                            </li>
+    
+                            <li>
+                                <p>
+                                    Waec Result
+                                </p>
+                            </li>
+    
+                            <li>
+                                <p>
+                                    Two Reference Letters
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Entrance Exam Result - Entrance Exam is scheduled for January 9, 10, or 11, 2025
+                                </p>
+                            </li>
+                        </ul>
+
                     </div>
 
                     <div>
@@ -189,6 +224,7 @@
             </div>
         </div>
     </div>
+
 @endsection
 
 @section('swiperscript')

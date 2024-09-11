@@ -19,6 +19,12 @@ donateBtn.onclick = () => {
   donate.classList.add('active-flex');
 }
 
+continueBtn.onclick = () => {
+  criteria.classList.remove('d-none');
+  instructions.classList.add('d-none');
+}
+
+
 contactBtn.onclick = () => {
   contact.classList.add('active-flex');
 }
@@ -45,11 +51,6 @@ menuBtn.onclick = () => {
 
 admMenuBtn.onclick = () => {
   sidebar.classList.toggle('active');
-}
-
-continueBtn.onclick = () => {
-  criteria.classList.remove('d-none');
-  instructions.classList.add('d-none');
 }
 
 

@@ -363,7 +363,7 @@
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
     </script> --}}
-    <script src="{{ asset('js/script2.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     
 </body>
 </html>
