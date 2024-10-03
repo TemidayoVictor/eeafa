@@ -734,6 +734,11 @@ p.text-center {
     top: 6rem;
 }
 
+.team .image-width {
+    position: sticky;
+    top: 6rem;
+}
+
 .about .left img, .leader .right img, .blog-box .left img, .gallery-box-left img, .blog-view-img img {
     width: 100%;
     border-radius: 5px;
@@ -1384,7 +1389,7 @@ button.sidebar-link {
         width:20rem;
     }
 
-    .about .left, .leader .right, .apply-info, .blog-view-img {
+    .about .left, .leader .right, .apply-info, .blog-view-img, .team .image-width {
         position: relative;
         top: 0em;
     }

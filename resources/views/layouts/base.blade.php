@@ -356,13 +356,13 @@
     @yield('swiperscript')
     {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
     <script src="https://cdn.tiny.cloud/1/t87rwwndacrt9grg1jwlnfaxaabxw3cxj77od5l8m4dhkcox/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    {{-- <script>
+    <script>
         tinymce.init({
         selector: 'textarea',
         plugins: 'anchor autolink charmap codesample emoticons',
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
-    </script> --}}
+    </script>
     <script src="{{ asset('js/script.js') }}"></script>
     
 </body>

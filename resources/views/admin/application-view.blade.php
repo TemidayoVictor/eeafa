@@ -14,7 +14,7 @@
             <div class="adm-app-right view flex-5">
                 <h1> {{$application->first_name}} {{$application->last_name}} </h1>
                 <p>
-                    {{$application->cover_letter}}
+                    {!! (str_replace( '<p>&nbsp;</p>', '', $application->cover_letter)) !!}
                 </p>
                 <div class="flex adm-app-det">
                     <h4>Status:</h4>

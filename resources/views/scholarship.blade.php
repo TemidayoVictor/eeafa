@@ -147,7 +147,7 @@
                         <ul>
                             <li>
                                 <p>
-                                    Program entrance exams are scheduled for January 9, 10, or 11, 2025. To be considered for the 2025 Cohort scholarship, you must successfully complete the entrance exam on one of the specified dates. More info will be provided on our website. To apply for the entrance exam, kindly send an email to us @obioma.onah@equaleducationaccessforall.org
+                                    Program entrance exams are scheduled for January 9, 10, or 11, 2025. To be considered for the 2025 Cohort scholarship, you must successfully complete the entrance exam on one of the specified dates. More info will be provided on our website. To apply for the entrance exam, kindly send an email to us 
                                 </p>
                             </li>
     
@@ -212,12 +212,9 @@
                         <p>
                             Click the link below to apply to our program
                         </p>
+                            <div id="apply-btn"> <a href="#" class="btn btn-blue" style="{{ $applicationActive ? "" : "display: none" }}">Apply To Our Program</a> </div>
 
-                        @if ($applicationActive)
-                            <div><a href="#" class="btn btn-blue" id="apply-btn">Apply To Our Program</a></div>
-                        @else
-                            <div><a href="#" class="btn btn-blue" id="inactive-btn">Apply To Our Program</a></div>
-                        @endif
+                            <div><a href="#" class="btn btn-blue" id="inactive-btn" style="{{ $applicationActive ? "display: none" : "" }}">Apply To Our Program</a></div>
                     </div>
 
                 </div>
@@ -233,6 +230,10 @@
         let inactiveClose = document.getElementById('inactive-close');
         let inactiveBtn = document.getElementById('inactive-btn');
 
+        let applyBtn = document.getElementById('apply-btn');
+        let apply = document.getElementById('apply');
+        let applyClose = document.getElementById('apply-close');
+
         inactiveBtn.onclick = () => {
             inactive.classList.add('active-flex');
         }
@@ -240,6 +241,15 @@
         inactiveClose.onclick = () => {
             inactive.classList.remove('active-flex');
         }
+
+        applyBtn.onclick = () => {
+            apply.classList.add('active-flex');
+        }
+
+        applyClose.onclick = () => {
+            apply.classList.remove('active-flex');
+        }
+
     </script>
 @endsection
 

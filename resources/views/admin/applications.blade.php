@@ -22,7 +22,7 @@
                 <div class="adm-app-right flex-5">
                     <h1> {{$application->first_name}} {{$application->last_name}} </h1>
                     <p>
-                        {{ \Illuminate\Support\Str::limit($application->cover_letter, 200, '...') }}
+                        {{ \Illuminate\Support\Str::limit(strip_tags($application->cover_letter), 200, '...') }}
                     </p>
                     <div class="flex">
                         <div>

@@ -97,22 +97,46 @@
             <div class="flex-3 flex-col-mob-rev team">
                 <div class="content-width flex-5">
                     <div>
-                        <h1>Name, Surname</h1>
-                        <h3>Position, EEAFA</h3>
+                        <h1>Idorenyin, Udosen</h1>
+                        <h3>Partner, EEAFA</h3>
                     </div>
                     
                     <div>
                         <p> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, rem! Veniam, ab voluptas. Sunt dicta at rerum sapiente consectetur minus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repudiandae itaque placeat illo quas labore maiores necessitatibus iusto ratione accusamus! 
+                            Idorenyin  Ataudo Udosen, DNP, MSN, RN is a Nurse Administrator at Health + Hospital Elmhurst in New York City. She has an extensive nursing leadership background in the transformation of clinical and administrative environments through planning, organizing, directing, and coordinating nursing services. 
                         </p>
                         <p class="mt-1">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, rem! Veniam, ab voluptas. Sunt dicta at rerum sapiente consectetur minus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repudiandae itaque placeat illo quas labore maiores necessitatibus iusto ratione accusamus!
+                            She coordinates the flow of work during off shift as Administrative officer on duty throughout the facility, conveys ideas to keep the hospital running efficiently and serves as liaison between the facility, staff, governance, and patients. Her commitment to resolving patients’ concerns, and family conflicts ultimately prepared her for this role. 
+                        </p>
+                        <p class="mt-1">
+                            She also worked as an In-Service Coordinator and Nurse Educator in a long term care facility where she directed the orientation process of all new hires and influences review and revision of organization policies/procedures to ensure compliance with safety, quality, and excellence in nursing practice. 
+                        </p>
+                        <p class="mt-1">
+                            Her leadership and educational background and passion for teaching advanced her to the position as an Adjunct Clinical Professor at New York City College of Technology where she is privileged to teach from her bank of knowledge. 
+                            Dr. Idy received her Doctorate of Nursing Practice in Executive Leadership from Grand Canyon University
+                        </p>
+                        <p class="mt-1">
+                            Her Direct Practice Improvement Project was on the relationship between education, religiosity and adherence to an antihypertensive regimen among Nigerian immigrants living in the United States. 
+                            Her research interests also included the impact of Covid-19 on family and nursing students.
+                        </p>
+                        <p class="mt-1">
+                            Passionate about mentoring and serving her community, Dr. Idy is the Co-Founder and Director of Iban Ifiok Inc, a non-profit organization dedicated to inspiring, motivating, and supporting adolescent African girls. 
+                        </p>
+                        <p class="mt-1">
+                            She is the current President of Nigerian Nurses Association of USA (NNAUSA) New York . 
+                        </p>
+                        <p class="mt-1">
+                            She also serves as a board of director for Hope Emmanuel Orphanage and Hope Mobolaji International Academy. 
+                        </p>
+                        <p class="mt-1">
+                            She is the President of Virtuous Women of Faith, World Restoration Center, Westbury New York.
+                            She is the Honorable Vice President of her high school Association- - CCC Old Girls Association of USA and Canada to help Reach Rebuild and Rehabilitate her community.
                         </p>
                     </div> 
                 </div>
 
                 <div class="image-width">
-                    <img src="{{ asset('images/President3.jpeg') }}" alt="">
+                    <img src="{{ asset('images/udosen.jpeg') }}" alt="">
                 </div>
             </div>
 

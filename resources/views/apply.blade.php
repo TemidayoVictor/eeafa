@@ -65,7 +65,7 @@
 
                                 <div class="apply-input">
                                     <label for="">Cover Letter</label>
-                                    <textarea id="" cols="30" rows="10" name="cover_letter" required>{{ old('cover_letter') }}</textarea>
+                                    <textarea id="" cols="30" rows="10" name="cover_letter">{{ old('cover_letter') }}</textarea>
                                 </div>
                                 <div class="apply-input">
                                     <label for="">Upload S.S.C.E Certificate</label>
@@ -156,7 +156,7 @@
                         <h2>Apply To Our Program</h2>
                     </div>
                     <div class="apply-info-body">
-                        <p>PS: EEAFA hopes to offer mentorship programs to guide participants in securing scholarships and study opportunities abroad after completing their first degree in Nigeria.</p>
+                        <p>PS: This Program is currently open to individuals who hail from NSUKKA Local Government area. If you do not satisfy this criteria, please do not apply. We will communicate when we launch the program for other areas. Thank you for your compliance.</p>
                     </div>
                 </div>
 

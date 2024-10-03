@@ -8,6 +8,7 @@ use App\Models\Application;
 use App\Models\Mailing;
 use App\Models\Blog;
 use App\Models\Gallery;
+use Carbon\Carbon;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class NavigationController extends Controller
@@ -240,10 +241,21 @@ class NavigationController extends Controller
     }
 
     public function scholarship() {
+        
+        $currentDate = Carbon::now();
+        $startDate = Carbon::createFromDate($currentDate->year, 4, 25); // April 25 of current year
+        $endDate = Carbon::createFromDate($currentDate->year, 5, 31); // May 30 of current year
+
+        if ($currentDate->between($startDate, $endDate)) {
+            $applicationActive = true; // Set status to true
+        } else {
+            $applicationActive = false; // Set status to false if outside the range
+        }
+        
         return view('scholarship', [
             'active' => 'scholarship',
             'admin' => false,
-            'applicationActive' => true, 
+            'applicationActive' => $applicationActive, 
         ]);
     }
 }

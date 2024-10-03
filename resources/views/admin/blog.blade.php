@@ -36,7 +36,7 @@
 
                 <div class="blog-input">
                     <label for="">Blog Body</label>
-                    <textarea name="body" id="" cols="30" rows="10" required></textarea>
+                    <textarea name="body" id="" cols="30" rows="10"></textarea>
                 </div>
 
                 <button class="btn btn-blue btn-block">Create Blog</button>
@@ -75,7 +75,7 @@
 
                 <div class="blog-input">
                     <label for="">Edit Blog Body</label>
-                    <textarea name="body" id="" cols="30" rows="10" required>
+                    <textarea name="body" id="" cols="30" rows="10">
                         {{ $blog->body }}
                     </textarea>
                 </div>
