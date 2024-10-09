@@ -81,13 +81,22 @@
                         <h1>Obioma Onah</h1>
                         <h3>President, EEAFA</h3>
                     </div>
-                    
+                                        
                     <div>
                         <p> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, rem! Veniam, ab voluptas. Sunt dicta at rerum sapiente consectetur minus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repudiandae itaque placeat illo quas labore maiores necessitatibus iusto ratione accusamus! 
+                            Dr. Obioma Onah is a Board-Certified Nurse Practitioner specializing in Adult Gerontology Primary Care (AGNP). She currently serves as an Advanced Practice Provider with Docgo. Obioma has previously worked as a primary care provider at ESSEN Medical Associates and has over seven years of experience as a registered nurse with Northwell Health, where she has gained expertise in various intensive care units, telemetry units, and medical-surgical settings.
                         </p>
                         <p class="mt-1">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, rem! Veniam, ab voluptas. Sunt dicta at rerum sapiente consectetur minus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repudiandae itaque placeat illo quas labore maiores necessitatibus iusto ratione accusamus!
+                            In 2016, she earned her Bachelor of Science in Nursing from Long Island University, Brooklyn Campus. She went on to obtain a Master’s degree from Columbia University School of Nursing in 2022, followed by a Doctorate of Nursing Practice from Columbia University in New York.
+                        </p>
+                        <p class="mt-1">
+                            Obioma is an active member of the Alpha Zeta Chapter of Sigma Theta Tau International at Columbia University. Her professional interests include policy reform and the care of older adults. Her doctoral thesis, titled "Decades of Inadequacy at Patient Expense: Federal Nurse Staffing Requirements for Nursing Homes," reflects her commitment to improving healthcare standards.
+                        </p>
+                        <p class="mt-1">
+                            Since 2021, Obioma has served as the Membership Chair of the Nigerian Nurses Association of the USA (NNAUSA), where she has fostered collaborations with New York City Health and Hospitals (HHC) on various initiatives, including research, Global Exchange Programs, ambassadorships, and leadership development. She also led the partnership between NNAUSA and Columbia University School of Nursing for the Walk to Nigeria Challenge project.
+                        </p>
+                        <p class="mt-1">
+                            In addition to her roles in NNAUSA, Obioma is a member of several professional organizations, including the National Association of Nigerian Nurses in North America (NANNNA), the American Nurses Association (ANA), and the New York Nurse Practitioner Association (NPA).
                         </p>
                     </div>
                     
@@ -140,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="flex-3 flex-col-mob team">
+            {{-- <div class="flex-3 flex-col-mob team">
                 <div class="image-width">
                     <img src="{{ asset('images/President.jpeg') }}" alt="">
                 </div>
@@ -161,7 +170,7 @@
                     </div>
                     
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="section container">
             <div>
